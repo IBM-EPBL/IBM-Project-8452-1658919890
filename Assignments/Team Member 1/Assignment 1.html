@@ -1,0 +1,79 @@
+<!doctype html>
+    <head> 
+        <title>Styled Registration Form</title>
+    <style>
+        body{
+            background-color: palevioletred;
+        }
+        #tit{
+            width: 25%;
+            margin: auto;
+            margin-top: 5%;
+            font-size: 20px;
+        }
+        form{
+            width: 25%;
+            margin: auto;
+            border:1px solid black;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            font-family: 'Times New Roman', Times, serif;
+            min-width: 200px;           
+            border-radius: 5px;
+        }
+        form div{
+            padding: 10px;
+        }
+        form div button{
+            text-align: center;           
+            color: blue;
+            background-color: bisque;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .but{
+            margin: auto ;
+        }
+        form div input{
+            margin-top: 5px;
+            height: 30px;
+            border-radius: 5px;
+
+        }
+    </style>
+    
+    </head>
+
+    <body>
+        <div id="tit">Registration Form</div><br>
+        <form>
+            <div>
+                <label for="na">Name:</label><br>
+                <input type="text" id="na" required></input>                
+            </div>
+            <div>
+                <label for="em">Email:</label><br>
+                <input type="email" id="em" required></input>                
+            </div>
+            <div>
+                <label for="m">Mobile:</label><br>
+                <input type="tel" id=""m required></input>                
+            </div>
+            <div>
+                <label for="c">City:</label><br>
+                <input type="text" id="c" required></input>                
+            </div>
+            <div>
+                <label for="s">State:</label><br>
+                <input type="text" id="s" required></input>                
+            </div>
+            <div>
+                <label for="s">Country:</label><br>
+                <input type="text" id="s" required></input>                
+            </div>
+            <div class="but">
+                <button>Submit</button>                
+            </div>
+        </form>        
+    </body>
+</html>
