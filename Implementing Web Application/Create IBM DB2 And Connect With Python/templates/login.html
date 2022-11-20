@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>
+            User Login
+        </title>
+        <style>
+            * {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  width: 40%;
+  margin: auto;
+}
+
+h2{
+    color: red;
+}
+
+
+body 
+{
+  background-color: rgb(243, 119, 197,0.5);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=email],input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid #060000;
+  background: lightwhite;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=number]:focus {
+ background-color:#FF6CB1;/*rgb(235, 81, 4);*/
+  color: white;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #060000;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #130bea;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+h1{
+  color: black;
+  text-align: center;
+}
+.registerbtn:hover {
+color: black;
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #1a0143;
+  text-align: center;
+  border:1px solid #060000;
+}
+        </style>
+    </head>
+    <body>
+        <form id="myForm" name="myForm" action="{{ url_for("login")}}" method="post">
+            <div class="container">
+            {% if message=="Username Not Found" %}
+                <h2>User Not Found</h2>
+                {% elif message=="Wrong Password" %}
+                <h2>Wrong Password</h2>
+                {% endif %}
+              <h1>Login User</h1>
+              <hr>
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" id="username" required>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <hr>          
+              <button type="submit" class="registerbtn" >Login</button>
+            </div>
+          </form>
+    </body>
+</html>
